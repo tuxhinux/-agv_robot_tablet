@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Hello World!</title>
+    <meta http-equiv="Content-Security-Policy" content="script-src 'self' 'unsafe-inline';" />
+
+    <link rel="stylesheet" href="../../styles/main.css">
+    <link rel="stylesheet" href="../../resources/bootstrap/bootstrap.min.css">
+</head>
+<body class="gray-bg">
+    <div class="containter">
+        <div class="row h-100vh">
+            <div class="col-4 h-100 p-5" id="navbar"></div>
+
+            <main class="col h-100 gray-bg p-5 d-flex flex-column justify-content-start align-items-between gap-4">
+                <div id="mission-container" class="d-flex flex-column justify-content-start align-items-center flex-grow-1 p-3 overflow-auto">
+                </div>
+
+                <div>
+                    <div id="approve-btn" class="blue-bg rounded-4 pointer">
+                        <p class="fw-bold text-white p-3 text-center fs-5">Onayla</p> 
+                    </div>
+                </div>
+            </main>
+        </div>
+    </div>
+
+    <script type="module" src="./js/index.js"></script>
+
+    <script src="../../resources/bootstrap/bootstrap.bundle.min.js"></script>
+
+    <script type="module">
+        import { addNavbar } from "../../components/navbar.js";
+
+        document.addEventListener("DOMContentLoaded", () => {
+            addNavbar("mission");
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,54 @@
+{
+  "name": "hamal",
+  "version": "1.0.0",
+  "main": "./src/js/main.js",
+  "scripts": {
+    "start": "electron . --no-sandbox",
+    "build": "electron-builder"
+  },
+  "author": {
+    "name": "Dogukan AL",
+    "email": "al_dokan_20@hotmail.com"
+  },
+  "license": "ISC",
+  "description": "",
+  "devDependencies": {
+    "electron": "^33.2.1",
+    "electron-builder": "^25.1.8"
+  },
+  "dependencies": {
+    "axios": "^1.7.9",
+    "systeminformation": "^5.25.5"
+  },
+  "build": {
+    "appId": "com.example.myapp",
+    "productName": "Hamal",
+    "directories": {
+      "output": "dist"
+    },
+    "files": [
+      "**/*",
+      "!node_modules/*/{test,tests}/**"
+    ],
+    "win": {
+      "target": "nsis"
+    },
+    "mac": {
+      "target": "dmg"
+    },
+    "linux": {
+      "target": [
+        "AppImage",
+        "deb"
+      ],
+      "category": "Utility",
+      "desktop": {
+        "Name": "hamal",
+        "GenericName": "AGV",
+        "Comment": "An agv controller application",
+        "Terminal": false,
+        "Type": "Application"
+      }
+    }
+  }
+}

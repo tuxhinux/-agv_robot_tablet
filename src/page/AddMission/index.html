@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Hello World!</title>
+    <meta http-equiv="Content-Security-Policy" content="script-src 'self' 'unsafe-inline';" />
+
+    <link rel="stylesheet" href="../../styles/main.css">
+    <link rel="stylesheet" href="../../resources/bootstrap/bootstrap.min.css">
+</head>
+<body class="gray-bg">
+    <div class="containter">
+        <div class="row h-100vh">
+            <div class="col-4 h-100 p-5" id="navbar"></div>
+
+            <main class="col h-100 gray-bg p-5 d-flex flex-column justify-content-start align-items-between gap-4">
+                <div class="d-flex flex-column justify-content-start align-items-center">
+                    <div class="bg-white p-4 w-100 rounded-4 d-flex justify-content-between align-items-center gap-3">
+
+                        <select id="location-select" class="form-select form-select-lg p-3 rounded-4 input-bg t-gray fw-bold" style="border:none;" aria-label="Large select example">
+                            <option selected>Bölge seç</option>
+                            <option value="S1">S1</option>
+                            <option value="S2">S2</option>
+                            <option value="A">A</option>
+                            <option value="B">B</option>
+                            <option value="C">C</option>
+                            <option value="D">D</option>
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                        </select>
+                        
+                        
+                        <div id="add" class="blue-bg rounded-3 d-flex justify-content-center align-items-center p-3 pointer">
+                            <img width="24" src="../../assets/icon/addMission/plus.svg">
+                        </div>
+                    </div>
+                </div>
+
+                <div id="mission-container" class="flex-grow-1 rounded-4 bg-white p-4">
+                </div>
+
+                <div>
+                    <div id="approve" class="blue-bg rounded-4 pointer">
+                        <p class="fw-bold text-white p-3 text-center fs-5">Onayla</p> 
+                    </div>
+                </div>
+            </main>
+        </div>
+    </div>
+
+    <script type="module" src="./js/index.js"></script>
+    <script src="../../resources/bootstrap/bootstrap.bundle.min.js"></script>
+
+    <script type="module">
+        import { addNavbar } from "../../components/navbar.js";
+
+        document.addEventListener("DOMContentLoaded", () => {
+            addNavbar("add-mission");
+        });
+    </script>
+</body>
+</html>

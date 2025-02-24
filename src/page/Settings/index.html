@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Hello World!</title>
+    <meta http-equiv="Content-Security-Policy" content="script-src 'self' 'unsafe-inline';" />
+
+    <link rel="stylesheet" href="../../styles/main.css">
+    <link rel="stylesheet" href="../../resources/bootstrap/bootstrap.min.css">
+</head>
+<body class="gray-bg">
+    <div class="containter">
+        <div class="row h-100vh">
+            <div class="col-4 h-100 p-5" id="navbar"></div>
+
+            <main class="col h-100 gray-bg p-5 d-flex flex-column justify-content-start align-items-between gap-4">
+                <div class="d-flex justify-content-center align-items-center rounded-4 flex-grow-1 w-100 bg-white">
+                    <img src="../../assets/icon/settings/question-mark.svg" width="156"> 
+                </div>
+
+                <div class="d-flex gap-4 bg-white rounded-4 p-4">
+                    <div class="d-flex flex-column gap-4 flex-grow-1">
+                        <div id="restart" class="rounded-4 orange-bg flex-grow-1 d-flex justify-content-center align-items-center pointer">
+                            <img src="../../assets/icon/settings/restart.svg" width="78"> 
+                        </div>
+                        
+                        <div id="battery" class="rounded-4 teal-bg flex-grow-1 d-flex justify-content-center align-items-center pointer">
+                            <img src="../../assets/icon/settings/battery.svg" width="78"> 
+                        </div>
+                    </div> 
+
+                    <div id="shutdown" class="flex-grow-1">
+                        <div class="red-bg rounded-4 flex-grow-1 d-flex justify-content-center align-items-center h-100 pointer">
+                            <img src="../../assets/icon/settings/power.svg" width="96">
+                        </div> 
+                    </div>
+                </div>
+            </main>
+        </div>
+    </div>
+
+    <script src="./js/index.js"></script>
+    
+    <script src="../../resources/bootstrap/bootstrap.bundle.min.js"></script>
+
+    <script type="module">
+        import { addNavbar } from "../../components/navbar.js";
+
+        document.addEventListener("DOMContentLoaded", () => {
+            addNavbar("settings");
+        });
+    </script>
+</body>
+</html>
